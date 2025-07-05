@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reference to Page Number Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 Bible Reference to Page Number Converter</h1>
+            <p class="subtitle">Enter a Bible reference to find the corresponding page number</p>
+        </header>
+
+        <main>
+            <form id="referenceForm" class="search-form">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="referenceInput" 
+                        placeholder="e.g., John 3:16, Genesis 1-3, Matthew 5:1-7:10"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="search-btn">
+                        <span>Find Page Number</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <p class="help-text">Enter Bible references in standard format. Press Enter or click the button to search.</p>
+            </form>
+
+            <div id="results" class="results-container"></div>
+
+            <details class="help-section">
+                <summary>Supported Reference Formats</summary>
+                <div class="help-content">
+                    <h3>Supported formats:</h3>
+                    <ul>
+                        <li><strong>Single verse:</strong> <code>John 3:16</code>, <code>Genesis 1:1</code></li>
+                        <li><strong>Verse range:</strong> <code>Matthew 5:3-12</code>, <code>Genesis 1:1-10</code></li>
+                        <li><strong>Whole chapter:</strong> <code>Psalm 23</code>, <code>Romans 8</code></li>
+                        <li><strong>Multiple chapters:</strong> <code>Genesis 1-3</code>, <code>Matthew 5-7</code></li>
+                        <li><strong>Cross-chapter verses:</strong> <code>Matthew 5:1-7:10</code></li>
+                    </ul>
+                    
+                    <h3>Supported books:</h3>
+                    <p>All 66 books of the Bible (Old and New Testament)</p>
+                    
+                    <div class="note">
+                        <strong>Note:</strong> This converter uses page numbers from a standard Bible edition. 
+                        Page numbers may vary between different Bible translations and publishers.
+                    </div>
+                </div>
+            </details>
+        </main>
+    </div>
+
+    <script src="bible-data.js"></script>
+    <script src="bible-parser.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
