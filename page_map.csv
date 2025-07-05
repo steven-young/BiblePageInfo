@@ -1,0 +1,458 @@
+page,ref,spill
+3,"Genesis 1:1-26",yes
+4,"Genesis 1:27-2:20",yes
+5,"Genesis 2:21-3:17",yes
+6,"Genesis 3:18-4:18",yes
+7,"Genesis 4:19-5:29",yes
+8,"Genesis 5:30-7:4",yes
+9,"Genesis 7:5-8:13",yes
+10,"Genesis 8:14-9:19",
+11,"Genesis 9:20-10:19",yes
+12,"Genesis 10:20-11:16",yes
+13,"Genesis 11:17-12:15",yes
+14,"Genesis 12:16-14:8",yes
+15,"Genesis 14:9-15:8",
+16,"Genesis 15:9-16:15",yes
+17,"Genesis 16:16-18:2",yes
+18,"Genesis 18:3-29",
+19,"Genesis 18:30-19:21",yes
+20,"Genesis 19:22-20:10",
+21,"Genesis 20:11-21:22",yes
+22,"Genesis 21:23-22:17",yes
+23,"Genesis 22:18-24:3",yes
+24,"Genesis 24:4-31",
+25,"Genesis 24:32-60",yes
+26,"Genesis 24:61-25:23",yes
+27,"Genesis 25:24-26:17",yes
+28,"Genesis 26:18-27:12",
+29,"Genesis 27:13-38",
+30,"Genesis 27:39-28:17",yes
+31,"Genesis 28:18-29:25",yes
+32,"Genesis 29:26-30:18",
+33,"Genesis 30:19-31:4",yes
+34,"Genesis 31:5-35",yes
+35,"Genesis 31:36-32:7",yes
+36,"Genesis 32:8-33:4",yes
+37,"Genesis 33:5-34:12",
+38,"Genesis 34:13-35:10",yes
+39,"Genesis 35:11-36:10",yes
+40,"Genesis 36:11-37",yes
+41,"Genesis 36:38-37:20",yes
+42,"Genesis 37:21-38:12",
+43,"Genesis 38:13-39:7",yes
+44,"Genesis 39:8-40:16",yes
+45,"Genesis 40:17-41:27",yes
+46,"Genesis 41:28-56",yes
+47,"Genesis 41:57-42:29",yes
+48,"Genesis 42:30-43:18",yes
+49,"Genesis 43:19-44:12",yes
+50,"Genesis 44:13-45:7",
+51,"Genesis 45:8-46:10",yes
+52,"Genesis 46:11-47:2",yes
+53,"Genesis 47:3-26",yes
+54,"Genesis 47:27-48:18",
+55,"Genesis 48:19-49:15",yes
+56,"Genesis 49:16-50:4",yes
+57,"Genesis 50:5-26",
+58,"Exodus 1:1-2:9",yes
+59,"Exodus 2:10-3:9",yes
+60,"Exodus 3:10-4:9",yes
+61,"Exodus 4:10-5:5",yes
+62,"Exodus 5:6-6:12",
+63,"Exodus 6:13-7:12",yes
+64,"Exodus 7:13-8:12",yes
+65,"Exodus 8:13-9:7",yes
+66,"Exodus 9:8-35",yes
+67,"Exodus 10:1-24",yes
+68,"Exodus 10:25-12:13",yes
+69,"Exodus 12:14-39",
+70,"Exodus 12:40-13:17",yes
+71,"Exodus 13:18-14:23",yes
+72,"Exodus 14:24-15:13",yes
+73,"Exodus 15:14-16:6",yes
+74,"Exodus 16:7-32",yes
+75,"Exodus 16:33-18:4",yes
+76,"Exodus 18:5-19:5",yes
+77,"Exodus 19:6-20:6",yes
+78,"Exodus 20:7-21:8",yes
+79,"Exodus 21:9-22:1",
+80,"Exodus 22:2-28",
+81,"Exodus 22:29-23:24",yes
+82,"Exodus 23:25-24:18",
+83,"Exodus 25:1-36",yes
+84,"Exodus 25:37-26:33",yes
+85,"Exodus 26:34-28:1",yes
+86,"Exodus 28:2-32",yes
+87,"Exodus 28:33-29:19",yes
+88,"Exodus 29:20-30:2",yes
+89,"Exodus 30:3-32",yes
+90,"Exodus 30:33-32:4",
+91,"Exodus 32:5-30",yes
+92,"Exodus 32:31-33:23",yes
+93,"Exodus 34:1-25",
+94,"Exodus 34:26-35:22",yes
+95,"Exodus 35:23-36:17",yes
+96,"Exodus 36:18-37:13",yes
+97,"Exodus 37:14-38:12",yes
+98,"Exodus 38:13-39:5",
+99,"Exodus 39:6-37",yes
+100,"Exodus 39:38-40:32",
+101,"Exodus 40:33-38",
+102,"Leviticus 1:1-2:8",yes
+103,"Leviticus 2:9-4:5",yes
+104,"Leviticus 4:6-32",yes
+105,"Leviticus 4:33-5:16",yes
+106,"Leviticus 5:17-6:21",yes
+107,"Leviticus 6:22-7:20",yes
+108,"Leviticus 7:21-8:11",yes
+109,"Leviticus 8:12-9:2",yes
+110,"Leviticus 9:3-10:4",yes
+111,"Leviticus 10:5-11:11",yes
+112,"Leviticus 11:12-47",yes
+113,"Leviticus 12:1-13:17",yes
+114,"Leviticus 13:18-46",yes
+115,"Leviticus 13:47-14:11",
+116,"Leviticus 14:12-38",yes
+117,"Leviticus 14:39-15:14",yes
+118,"Leviticus 15:15-16:5",
+119,"Leviticus 16:6-29",yes
+120,"Leviticus 16:30-18:7",yes
+121,"Leviticus 18:8-19:9",yes
+122,"Leviticus 19:10-37",
+123,"Leviticus 20:1-26",yes
+124,"Leviticus 20:27-22:5",yes
+125,"Leviticus 22:6-23:2",
+126,"Leviticus 23:3-28",yes
+127,"Leviticus 23:29-24:11",yes
+128,"Leviticus 24:12-25:22",
+130,"Leviticus 25:23-53",yes
+130,"Leviticus 25:54-26:27",yes
+131,"Leviticus 26:28-27:8",
+132,"Leviticus 27:9-34",
+133,"Numbers 1:1-29",
+134,"Numbers 1:30-2:4",
+135,"Numbers 2:5-3:4",yes
+136,"Numbers 3:5-37",
+137,"Numbers 3:38-4:15",yes
+138,"Numbers 4:16-49",yes
+139,"Numbers 5:1-25",yes
+140,"Numbers 5:26-6:18",
+141,"Numbers 6:19-7:19",yes
+142,"Numbers 7:20-49",yes
+143,"Numbers 7:50-80",yes
+144,"Numbers 7:81-8:19",yes
+145,"Numbers 8:20-9:20",
+146,"Numbers 9:21-10:32",yes
+147,"Numbers 10:33-11:23",yes
+148,"Numbers 11:24-12:14",yes
+149,"Numbers 12:15-13:32",yes
+150,"Numbers 13:33-14:28",yes
+151,"Numbers 14:29-15:14",yes
+152,"Numbers 15:15-16:1",yes
+153,"Numbers 16:2-30",yes
+154,"Numbers 16:31-17:11",
+155,"Numbers 17:12-18:22",yes
+156,"Numbers 18:23-19:18",yes
+157,"Numbers 19:19-20:19",yes
+158,"Numbers 20:20-21:15",yes
+159,"Numbers 21:16-22:4",yes
+160,"Numbers 22:5-30",
+161,"Numbers 22:31-23:15",
+162,"Numbers 23:16-24:9",
+163,"Numbers 24:10-25:5",yes
+164,"Numbers 25:6-26:17",
+165,"Numbers 26:18-41",
+166,"Numbers 26:42-27:3",yes
+167,"Numbers 27:4-28:10",yes
+168,"Numbers 28:11-29:6",
+169,"Numbers 29:7-38",
+170,"Numbers 29:39-31:12",yes
+171,"Numbers 31:13-51",yes
+172,"Numbers 31:52-32:27",
+173,"Numbers 32:28-33:17",
+174,"Numbers 33:18-34:2",
+175,"Numbers 34:3-35:6",yes
+176,"Numbers 35:7-36:1",yes
+177,"Numbers 36:2-13",
+178,"Deuteronomy 1:1-25",yes
+179,"Deuteronomy 1:26-2:8",yes
+180,"Deuteronomy 2:9-36",yes
+181,"Deuteronomy 2:37-3:24",yes
+182,"Deuteronomy 3:25-4:22",yes
+183,"Deuteronomy 4:23-48",yes
+184,"Deuteronomy 4:49-5:24",yes
+185,"Deuteronomy 5:25-6:23",
+186,"Deuteronomy 6:24-7:22",yes
+187,"Deuteronomy 7:23-9:3",
+188,"Deuteronomy 9:4-27",
+189,"Deuteronomy 9:28-11:3",
+190,"Deuteronomy 11:4-32",yes
+191,"Deuteronomy 12:1-27",yes
+192,"Deuteronomy 12:28-13:18",yes
+193,"Deuteronomy 14:1-15:3",yes
+194,"Deuteronomy 15:4-16:6",yes
+195,"Deuteronomy 16:7-17:9",yes
+196,"Deuteronomy 17:10-18:16",yes
+197,"Deuteronomy 18:17-19:21",yes
+198,"Deuteronomy 20:1-21:7",yes
+199,"Deuteronomy 21:8-22:10",
+200,"Deuteronomy 22:11-23:6",
+201,"Deuteronomy 23:7-24:8",yes
+202,"Deuteronomy 24:9-25:16",
+203,"Deuteronomy 25:17-27:3",yes
+204,"Deuteronomy 27:4-28:3",
+205,"Deuteronomy 28:4-30",yes
+206,"Deuteronomy 28:31-59",yes
+207,"Deuteronomy 28:60-29:18",
+208,"Deuteronomy 29:19-30:15",yes
+209,"Deuteronomy 30:16-31:18",
+210,"Deuteronomy 31:19-32:10",
+211,"Deuteronomy 32:11-29",yes
+212,"Deuteronomy 32:30-51",yes
+213,"Deuteronomy 32:52-33:16",
+214,"Deuteronomy 33:17-34:4",yes
+215,"Deuteronomy 34:5-12",
+216,"Joshua 1:1-2:7",yes
+217,"Joshua 2:8-3:7",yes
+218,"Joshua 3:8-4:16",
+219,"Joshua 4:17-5:15",
+220,"Joshua 6:1-25",
+221,"Joshua 6:26-7:19",yes
+222,"Joshua 7:20-8:18",yes
+223,"Joshua 8:19-9:4",yes
+224,"Joshua 9:5-10:3",yes
+225,"Joshua 10:4-28",yes
+226,"Joshua 10:29-11:11",
+227,"Joshua 11:12-12:9",
+228,"Joshua 12:10-13:15",
+229,"Joshua 13:16-14:8",yes
+230,"Joshua 14:9-15:16",yes
+231,"Joshua 15:17-16:1",yes
+232,"Joshua 16:2-17:12",yes
+233,"Joshua 17:13-18:16",yes
+234,"Joshua 18:17-19:23",
+235,"Joshua 19:24-20:4",yes
+236,"Joshua 20:5-21:25",yes
+237,"Joshua 21:26-22:9",yes
+238,"Joshua 22:10-31",yes
+239,"Joshua 22:32-24:6",yes
+240,"Joshua 24:7-30",
+241,"Joshua 24:31-33",
+242,"Judges 1:1-26",yes
+243,"Judges 1:27-2:18",yes
+244,"Judges 2:19-3:22",yes
+245,"Judges 3:23-4:17",yes
+246,"Judges 4:18-5:14",
+247,"Judges 5:15-6:5",yes
+248,"Judges 6:6-29",
+249,"Judges 6:30-7:14",yes
+250,"Judges 7:15-8:12",
+251,"Judges 8:13-9:4",yes
+252,"Judges 9:5-32",yes
+253,"Judges 9:33-10:4",yes
+254,"Judges 10:5-11:16",yes
+255,"Judges 11:17-39",yes
+256,"Judges 11:40-13:10",yes
+257,"Judges 13:11-14:12",yes
+258,"Judges 14:13-15:12",yes
+259,"Judges 15:13-16:13",yes
+260,"Judges 16:14-31",
+261,"Judges 17:1-18:11",yes
+262,"Judges 18:12-19:6",yes
+263,"Judges 19:7-30",
+264,"Judges 20:1-28",yes
+265,"Judges 20:29-21:5",yes
+266,"Judges 21:6-25",
+267,"Ruth 1:1-2:1",yes
+268,"Ruth 2:2-23",yes
+269,"Ruth 3:1-4:4",yes
+270,"Ruth 4:5-22",
+271,"1 Samuel 1:1-23",
+272,"1 Samuel 1:24-2:16",yes
+273,"1 Samuel 2:17-3:3",yes
+274,"1 Samuel 3:4-4:8",yes
+275,"1 Samuel 4:9-5:9",yes
+276,"1 Samuel 5:10-6:19",yes
+277,"1 Samuel 6:20-8:5",
+278,"1 Samuel 8:6-9:12",yes
+279,"1 Samuel 9:13-10:7",yes
+280,"1 Samuel 10:8-11:4",yes
+281,"1 Samuel 11:5-12:11",yes
+282,"1 Samuel 12:12-13:11",yes
+283,"1 Samuel 13:12-14:12",
+284,"1 Samuel 14:13-36",yes
+285,"1 Samuel 14:37-15:6",yes
+286,"1 Samuel 15:7-31",
+287,"1 Samuel 15:32-16:18",
+288,"1 Samuel 16:19-17:25",yes
+289,"1 Samuel 17:26-51",yes
+290,"1 Samuel 17:52-18:21",yes
+291,"1 Samuel 18:22-19:18",yes
+292,"1 Samuel 19:19-20:21",yes
+293,"1 Samuel 20:22-21:5",yes
+294,"1 Samuel 21:6-22:14",yes
+295,"1 Samuel 22:15-23:17",
+296,"1 Samuel 23:18-24:15",yes
+297,"1 Samuel 24:16-25:20",yes
+298,"1 Samuel 25:21-26:1",
+299,"1 Samuel 26:2-27:1",yes
+300,"1 Samuel 27:2-28:15",yes
+301,"1 Samuel 28:16-30:2",yes
+302,"1 Samuel 30:3-31",
+303,"1 Samuel 31:1-13",
+304,"2 Samuel 1:1-22",yes
+305,"2 Samuel 1:23-2:21",
+306,"2 Samuel 2:22-3:14",yes
+307,"2 Samuel 3:15-39",yes
+308,"2 Samuel 4:1-5:9",yes
+309,"2 Samuel 5:10-6:11",yes
+310,"2 Samuel 6:12-7:12",yes
+311,"2 Samuel 7:13-8:4",yes
+312,"2 Samuel 8:5-9:10",yes
+313,"2 Samuel 9:11-10:19",yes
+314,"2 Samuel 11:1-27",yes
+315,"2 Samuel 12:1-24",yes
+316,"2 Samuel 12:25-13:18",yes
+317,"2 Samuel 13:19-14:3",
+318,"2 Samuel 14:4-26",yes
+319,"2 Samuel 14:27-15:16",yes
+320,"2 Samuel 15:17-16:2",
+321,"2 Samuel 16:3-17:6",yes
+322,"2 Samuel 17:7-28",yes
+323,"2 Samuel 17:29-18:20",yes
+324,"2 Samuel 18:21-19:8",
+325,"2 Samuel 19:9-35",yes
+326,"2 Samuel 19:36-20:12",yes
+327,"2 Samuel 20:13-21:8",yes
+328,"2 Samuel 21:9-22:6",
+329,"2 Samuel 22:7-33",
+330,"2 Samuel 22:34-23:7",
+331,"2 Samuel 23:8-23:29",
+332,"2 Samuel 23:30-24:15",yes
+333,"2 Samuel 24:16-24:25",
+334,"1 Kings 1:1-27",yes
+335,"1 Kings 1:28-2:1",
+336,"1 Kings 2:2-26",yes
+337,"1 Kings 2:27-3:4",yes
+338,"1 Kings 3:5-4:4",yes
+339,"1 Kings 4:5-33",yes
+340,"1 Kings 4:34-6:1",yes
+341,"1 Kings 6:2-31",yes
+342,"1 Kings 6:32-7:18",yes
+343,"1 Kings 7:19-42",
+344,"1 Kings 7:43-8:18",yes
+345,"1 Kings 8:19-38",yes
+346,"1 Kings 8:39-60",yes
+347,"1 Kings 8:61-9:13",yes
+348,"1 Kings 9:14-10:10",
+349,"1 Kings 10:11-11:6",yes
+350,"1 Kings 11:7-31",yes
+351,"1 Kings 11:32-12:14",yes
+352,"1 Kings 12:15-13:2",
+353,"1 Kings 13:3-29",yes
+354,"1 Kings 13:30-14:19",yes
+355,"1 Kings 14:20-15:14",yes
+356,"1 Kings 15:15-16:6",yes
+357,"1 Kings 16:7-30",yes
+358,"1 Kings 16:31-17:24",yes
+359,"1 Kings 18:1-26",yes
+360,"1 Kings 18:27-19:6",yes
+361,"1 Kings 19:7-20:8",yes
+362,"1 Kings 20:9-31",yes
+363,"1 Kings 20:32-21:9",yes
+364,"1 Kings 21:10-22:6",
+365,"1 Kings 22:7-30",
+366,"1 Kings 22:31-53",
+367,"2 Kings 1:1-2:1",yes
+368,"2 Kings 2:2-24",yes
+369,"2 Kings 2:25-3:25",yes
+370,"2 Kings 3:26-4:25",yes
+371,"2 Kings 4:26-5:4",yes
+372,"2 Kings 5:5-25",yes
+373,"2 Kings 5:26-6:23",
+374,"2 Kings 6:24-7:9",yes
+375,"2 Kings 7:10-8:9",
+376,"2 Kings 8:10-9:4",yes
+377,"2 Kings 9:5-25",yes
+378,"2 Kings 9:26-10:11",yes
+379,"2 Kings 10:12-36",yes
+380,"2 Kings 11:1-20",
+381,"2 Kings 11:21-12:21",
+382,"2 Kings 13:1-24",yes
+383,"2 Kings 13:25-14:22",
+384,"2 Kings 14:23-15:16",yes
+385,"2 Kings 15:17-16:1",yes
+386,"2 Kings 16:2-17:4",yes
+387,"2 Kings 17:5-27",yes
+388,"2 Kings 17:28-18:14",yes
+389,"2 Kings 18:15-32",yes
+390,"2 Kings 18:33-19:20",yes
+391,"2 Kings 19:21-37",
+392,"2 Kings 20:1-21:3",yes
+393,"2 Kings 21:4-22:4",yes
+394,"2 Kings 22:5-23:5",yes
+395,"2 Kings 23:6-24",yes
+396,"2 Kings 23:25-24:9",yes
+397,"2 Kings 24:10-25:13",
+398,"2 Kings 25:14-30",
+399,"1 Chronicles 1:1-30",yes
+400,"1 Chronicles 1:31-51",yes
+401,"1 Chronicles 1:52-2:26",yes
+402,"1 Chronicles 2:27-55",
+403,"1 Chronicles 3:1-4:2",yes
+404,"1 Chronicles 4:3-26",yes
+405,"1 Chronicles 4:27-5:12",
+406,"1 Chronicles 5:13-6:15",
+407,"1 Chronicles 6:16-44",yes
+408,"1 Chronicles 6:45-72",
+409,"1 Chronicles 6:73-7:15",yes
+410,"1 Chronicles 7:16-8:6",yes
+411,"1 Chronicles 8:7-9:4",yes
+412,"1 Chronicles 9:5-31",yes
+413,"1 Chronicles 9:32-10:14",
+414,"1 Chronicles 11:1-24",yes
+415,"1 Chronicles 11:25-12:10",
+416,"1 Chronicles 12:11-40",yes
+417,"1 Chronicles 13:1-14:14",yes
+418,"1 Chronicles 14:15-15:25",yes
+419,"1 Chronicles 15:26-16:23",
+420,"1 Chronicles 16:24-17:4",yes
+421,"1 Chronicles 17:5-27",yes
+422,"1 Chronicles 18:1-19:6",yes
+423,"1 Chronicles 19:7-20:8",
+424,"1 Chronicles 21:1-23",yes
+425,"1 Chronicles 21:24-22:18",yes
+426,"1 Chronicles 22:19-23:23",
+427,"1 Chronicles 23:24-24:20",yes
+428,"1 Chronicles 24:21-25:10",
+429,"1 Chronicles 25:11-26:14",yes
+430,"1 Chronicles 26:15-27:4",yes
+431,"1 Chronicles 27:5-28",yes
+432,"1 Chronicles 27:29-28:15",yes
+433,"1 Chronicles 28:16-29:11",
+434,"1 Chronicles 29:12-30",
+435,"2 Chronicles 1:1-2:3",yes
+436,"2 Chronicles 2:4-3:2",
+437,"2 Chronicles 3:3-4:8",yes
+438,"2 Chronicles 4:9-5:11",yes
+439,"2 Chronicles 5:12-6:18",yes
+440,"2 Chronicles 6:19-38",yes
+441,"2 Chronicles 6:39-7:16",yes
+442,"2 Chronicles 7:17-8:18",yes
+443,"2 Chronicles 9:1-22",yes
+444,"2 Chronicles 9:23-10:18",yes
+445,"2 Chronicles 10:19-12:6",
+446,"2 Chronicles 12:7-13:12",
+447,"2 Chronicles 13:13-15:2",yes
+448,"2 Chronicles 15:3-16:8",yes
+449,"2 Chronicles 16:9-18:3",yes
+450,"2 Chronicles 18:4-27",yes
+451,"2 Chronicles 18:28-20:5",yes
+452,"2 Chronicles 20:6-26",yes
+453,"2 Chronicles 20:27-21:13",yes
+454,"2 Chronicles 21:14-22:11",yes
+455,"2 Chronicles 22:12-23:18",yes
+456,"2 Chronicles 23:19-24:20",
+457,"2 Chronicles 24:21-25:14",yes
+458,"2 Chronicles 25:15-26:8",
+459,"2 Chronicles 26:9-27:7",yes

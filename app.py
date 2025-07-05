@@ -35,13 +35,16 @@ def main():
                     else:
                         st.success(f"📖 **{result['reference']}** can be found on page **{result['page']}**")
                     
+                    # Show warning if some verses were out of range
+                    if result.get('warning'):
+                        st.warning(f"⚠️ {result['warning']}")
+                    
                     # Display additional information if available
                     if result.get('book_info'):
                         with st.expander("Reference Details"):
                             st.write(f"**Book:** {result['book_info']['name']}")
-                            st.write(f"**Chapter:** {result['book_info']['chapter']}")
-                            if result['book_info'].get('verses'):
-                                st.write(f"**Verses:** {result['book_info']['verses']}")
+                            if result['book_info']['chapter']:
+                                st.write(f"**Chapter:** {result['book_info']['chapter']}")
                             if result.get('is_range', False):
                                 st.write(f"**Page Range:** {result['page_start']} - {result['page_end']}")
                             else:
