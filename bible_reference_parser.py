@@ -139,24 +139,48 @@ class BibleReferenceParser:
         # Clean up the reference
         reference = reference.strip()
         
-        # Pattern to match various reference formats
-        # Examples: "John 3:16", "Genesis 1:1-10", "Psalm 23", "1 Corinthians 13:1-13"
-        pattern = r'^([1-3]?\s*[a-zA-Z]+(?:\s+of\s+[a-zA-Z]+)?)\s+(\d+)(?::(\d+(?:-\d+)?))?$'
+        # Pattern to match various reference formats including multi-chapter ranges
+        # Examples: "John 3:16", "Genesis 1:1-10", "Psalm 23", "Genesis 1-3", "Matthew 5-7:10"
+        patterns = [
+            # Multi-chapter ranges: "Genesis 1-3", "Matthew 5-7"
+            r'^([1-3]?\s*[a-zA-Z]+(?:\s+of\s+[a-zA-Z]+)?)\s+(\d+)-(\d+)$',
+            # Chapter with verse range across chapters: "Matthew 5:1-7:10" 
+            r'^([1-3]?\s*[a-zA-Z]+(?:\s+of\s+[a-zA-Z]+)?)\s+(\d+):(\d+)-(\d+):(\d+)$',
+            # Single chapter with verse range: "John 3:16-20", "Genesis 1:1-10"
+            r'^([1-3]?\s*[a-zA-Z]+(?:\s+of\s+[a-zA-Z]+)?)\s+(\d+):(\d+(?:-\d+)?)$',
+            # Single chapter only: "Psalm 23", "Romans 8"
+            r'^([1-3]?\s*[a-zA-Z]+(?:\s+of\s+[a-zA-Z]+)?)\s+(\d+)$'
+        ]
         
-        match = re.match(pattern, reference, re.IGNORECASE)
-        if not match:
-            return None
+        for i, pattern in enumerate(patterns):
+            match = re.match(pattern, reference, re.IGNORECASE)
+            if match:
+                book_name = match.group(1).strip().lower()
+                
+                # Find the book key
+                book_key = self.book_lookup.get(book_name)
+                if not book_key:
+                    return None
+                
+                if i == 0:  # Multi-chapter range
+                    start_chapter = int(match.group(2))
+                    end_chapter = int(match.group(3))
+                    return book_key, start_chapter, f"chapters {start_chapter}-{end_chapter}"
+                elif i == 1:  # Cross-chapter verse range
+                    start_chapter = int(match.group(2))
+                    start_verse = match.group(3)
+                    end_chapter = int(match.group(4))
+                    end_verse = match.group(5)
+                    return book_key, start_chapter, f"{start_chapter}:{start_verse}-{end_chapter}:{end_verse}"
+                elif i == 2:  # Single chapter with verse range
+                    chapter = int(match.group(2))
+                    verses = match.group(3)
+                    return book_key, chapter, verses
+                else:  # Single chapter only
+                    chapter = int(match.group(2))
+                    return book_key, chapter, None
         
-        book_name = match.group(1).strip().lower()
-        chapter = int(match.group(2))
-        verses = match.group(3) if match.group(3) else None
-        
-        # Find the book key
-        book_key = self.book_lookup.get(book_name)
-        if not book_key:
-            return None
-        
-        return book_key, chapter, verses
+        return None
     
     def _calculate_page_number(self, book_key: str, chapter: int, verses: Optional[str]) -> int:
         """
@@ -173,14 +197,35 @@ class BibleReferenceParser:
         # For verses, add fractional page based on verse number
         verse_offset = 0
         if verses:
-            # Handle verse ranges
-            if '-' in verses:
+            # Handle different verse formats
+            if verses.startswith('chapters '):
+                # Multi-chapter range: "chapters 1-3"
+                chapter_range = verses.replace('chapters ', '')
+                if '-' in chapter_range:
+                    start_ch, end_ch = map(int, chapter_range.split('-'))
+                    # Use starting chapter for page calculation
+                    chapter_offset = max(0, (start_ch - 1) * 1.5)
+            elif ':' in verses and '-' in verses:
+                # Check if it's a cross-chapter reference like "5:1-7:10"
+                if verses.count(':') == 2:  # Cross-chapter verse range
+                    start_part = verses.split('-')[0]
+                    start_verse = int(start_part.split(':')[1]) if ':' in start_part else 1
+                    verse_offset = (start_verse - 1) / 25
+                else:
+                    # Single chapter verse range like "16-20"
+                    if '-' in verses:
+                        start_verse = int(verses.split('-')[0])
+                    else:
+                        start_verse = int(verses)
+                    verse_offset = (start_verse - 1) / 25
+            elif '-' in verses:
+                # Simple verse range within same chapter
                 start_verse = int(verses.split('-')[0])
+                verse_offset = (start_verse - 1) / 25
             else:
+                # Single verse
                 start_verse = int(verses)
-            
-            # Rough estimation: 25-30 verses per page
-            verse_offset = (start_verse - 1) / 25
+                verse_offset = (start_verse - 1) / 25
         
         return int(base_page + chapter_offset + verse_offset)
     

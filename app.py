@@ -11,8 +11,8 @@ def main():
     # Create input field
     reference_input = st.text_input(
         "Bible Reference",
-        placeholder="e.g., John 3:16, Genesis 1:1-10, Psalm 23",
-        help="Enter Bible references in standard format. Examples: 'John 3:16', 'Genesis 1:1-10', 'Matthew 5:3-12'"
+        placeholder="e.g., John 3:16, Genesis 1-3, Matthew 5:1-7:10",
+        help="Enter Bible references in standard format. Examples: 'John 3:16', 'Genesis 1-3', 'Matthew 5:1-7:10'"
     )
     
     # Create submit button
@@ -47,7 +47,8 @@ def main():
         - Single verse: `John 3:16`, `Genesis 1:1`
         - Verse range: `Matthew 5:3-12`, `Genesis 1:1-10`
         - Whole chapter: `Psalm 23`, `Romans 8`
-        - Multiple chapters: `Genesis 1-3`
+        - Multiple chapters: `Genesis 1-3`, `Matthew 5-7`
+        - Cross-chapter verses: `Matthew 5:1-7:10`
         
         **Supported books:** All 66 books of the Bible (Old and New Testament)
         
