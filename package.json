@@ -1,0 +1,16 @@
+{
+  "name": "bible-reference-converter",
+  "version": "1.0.0",
+  "description": "Bible Reference to Page Number Converter - JavaScript Web App",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "live-server --port=3000 --open=/index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["bible", "reference", "converter", "page", "lookup"],
+  "author": "",
+  "license": "MIT"
+}
