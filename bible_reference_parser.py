@@ -191,6 +191,6 @@ class BibleReferenceParser:
                 missing += 1
         
         if not pages:
-            return [], f"All {missing} verse(s) out of range."
+            return [], f"All {missing} verse(s) out of range. Reference: '{ref}', Verse IDs: {vids[:5] if len(vids) > 5 else vids}"
         
         return sorted(pages), (None if missing == 0 else f"{missing} verse(s) out of range.")
