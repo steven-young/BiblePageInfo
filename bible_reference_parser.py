@@ -44,17 +44,16 @@ class BibleReferenceParser:
     
     def _expand_abbrev(self, ref_str: str) -> str:
         """Expand abbreviated book names to full names."""
+        # Handle full book names that need conversion
+        if ref_str.startswith("Song of Solomon"):
+            return ref_str.replace("Song of Solomon", "Song of Songs", 1)
+        
+        # Handle abbreviations
         parts = ref_str.strip().split(' ', 1)
         book = parts[0]
         rest = parts[1] if len(parts) > 1 else ''
         full = self.book_abbrevs.get(book)
-        expanded = f"{full} {rest}".strip() if full else ref_str
-        
-        # Handle special book name mappings for CSV compatibility
-        if expanded.startswith("Song of Solomon"):
-            expanded = expanded.replace("Song of Solomon", "Song of Songs", 1)
-        
-        return expanded
+        return f"{full} {rest}".strip() if full else ref_str
     
     def _load_page_map(self, csv_path: str) -> Dict[int, Set[int]]:
         """
