@@ -8,15 +8,21 @@ def main():
     # Initialize the parser
     parser = BibleReferenceParser()
     
-    # Create input field
-    reference_input = st.text_input(
-        "Bible Reference",
-        placeholder="e.g., John 3:16, Genesis 1-3, Matthew 5:1-7:10",
-        help="Enter Bible references in standard format. Examples: 'John 3:16', 'Genesis 1-3', 'Matthew 5:1-7:10'"
-    )
+    # Use a form to enable Enter key functionality
+    with st.form(key="reference_form", clear_on_submit=False):
+        # Create input field
+        reference_input = st.text_input(
+            "Bible Reference",
+            placeholder="e.g., John 3:16, Genesis 1-3, Matthew 5:1-7:10",
+            help="Enter Bible references in standard format. Press Enter or click the button to search.",
+            key="reference_input"
+        )
+        
+        # Create submit button
+        search_clicked = st.form_submit_button("Find Page Number", type="primary")
     
-    # Create submit button
-    if st.button("Find Page Number", type="primary"):
+    # Process the reference when form is submitted (button clicked OR Enter pressed)
+    if search_clicked:
         if reference_input.strip():
             try:
                 # Process the reference
