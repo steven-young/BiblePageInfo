@@ -75,6 +75,9 @@ Preferred communication style: Simple, everyday language.
 - July 05, 2025: Added Enter key functionality using Streamlit forms for automatic submission
 - July 05, 2025: Implemented page range calculation and display for references spanning multiple pages
 - July 05, 2025: Updated UI to show "page" vs "pages" appropriately based on single page or page range
+- July 05, 2025: Fixed Song of Solomon book name mapping to correctly convert to "Song of Songs" for CSV compatibility
+- July 05, 2025: Loaded complete CSV data file with all 66 Bible books including New Testament references
+- July 05, 2025: Resolved Mark 11:1 error by ensuring complete dataset availability
 
 ## Changelog
 
