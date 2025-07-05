@@ -48,7 +48,13 @@ class BibleReferenceParser:
         book = parts[0]
         rest = parts[1] if len(parts) > 1 else ''
         full = self.book_abbrevs.get(book)
-        return f"{full} {rest}".strip() if full else ref_str
+        expanded = f"{full} {rest}".strip() if full else ref_str
+        
+        # Handle special book name mappings for CSV compatibility
+        if expanded.startswith("Song of Solomon"):
+            expanded = expanded.replace("Song of Solomon", "Song of Songs", 1)
+        
+        return expanded
     
     def _load_page_map(self, csv_path: str) -> Dict[int, Set[int]]:
         """
@@ -62,7 +68,7 @@ class BibleReferenceParser:
                 reader = csv.DictReader(f)
                 for row in reader:
                     page = int(row['page'])
-                    ref = self._expand_abbrev(row['ref'])
+                    ref = row['ref']  # Use CSV reference as-is for parsing
                     # Detect spill flag (optional column)
                     spill = str(row.get('spill', '')).strip().lower() in ('1', 'true', 'yes', 'y')
                     
