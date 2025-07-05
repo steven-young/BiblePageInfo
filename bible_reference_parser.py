@@ -99,7 +99,7 @@ class BibleReferenceParser:
             reference (str): The Bible reference to parse
             
         Returns:
-            Dict: Contains success status, page number, and reference details
+            Dict: Contains success status, page number(s), and reference details
         """
         try:
             parsed = self._parse_reference(reference)
@@ -110,12 +110,15 @@ class BibleReferenceParser:
                 }
             
             book_key, chapter, verses = parsed
-            page_number = self._calculate_page_number(book_key, chapter, verses)
+            page_info = self._calculate_page_range(book_key, chapter, verses)
             
             return {
                 'success': True,
                 'reference': self._format_reference(book_key, chapter, verses),
-                'page': page_number,
+                'page': page_info['page_display'],
+                'page_start': page_info['page_start'],
+                'page_end': page_info['page_end'],
+                'is_range': page_info['is_range'],
                 'book_info': {
                     'name': self.books[book_key]['name'],
                     'chapter': chapter,
@@ -182,11 +185,10 @@ class BibleReferenceParser:
         
         return None
     
-    def _calculate_page_number(self, book_key: str, chapter: int, verses: Optional[str]) -> int:
+    def _calculate_page_range(self, book_key: str, chapter: int, verses: Optional[str]) -> Dict:
         """
-        Calculate the page number for a given reference.
-        This is a simplified calculation - in reality, you'd need more detailed
-        verse-to-page mapping data.
+        Calculate the page range for a given reference.
+        Returns both start and end pages for multi-page references.
         """
         base_page = self.books[book_key]['page_start']
         
@@ -194,8 +196,11 @@ class BibleReferenceParser:
         # This would need to be replaced with actual page mapping data
         chapter_offset = max(0, (chapter - 1) * 1.5)
         
-        # For verses, add fractional page based on verse number
-        verse_offset = 0
+        # Default to single page
+        start_page = int(base_page + chapter_offset)
+        end_page = start_page
+        is_range = False
+        
         if verses:
             # Handle different verse formats
             if verses.startswith('chapters '):
@@ -203,31 +208,80 @@ class BibleReferenceParser:
                 chapter_range = verses.replace('chapters ', '')
                 if '-' in chapter_range:
                     start_ch, end_ch = map(int, chapter_range.split('-'))
-                    # Use starting chapter for page calculation
-                    chapter_offset = max(0, (start_ch - 1) * 1.5)
+                    # Calculate start and end pages for chapter range
+                    start_offset = max(0, (start_ch - 1) * 1.5)
+                    end_offset = max(0, (end_ch - 1) * 1.5) + 1.5  # Add full chapter length
+                    start_page = int(base_page + start_offset)
+                    end_page = int(base_page + end_offset)
+                    is_range = True
             elif ':' in verses and '-' in verses:
                 # Check if it's a cross-chapter reference like "5:1-7:10"
                 if verses.count(':') == 2:  # Cross-chapter verse range
-                    start_part = verses.split('-')[0]
-                    start_verse = int(start_part.split(':')[1]) if ':' in start_part else 1
-                    verse_offset = (start_verse - 1) / 25
+                    parts = verses.split('-')
+                    start_part = parts[0]
+                    end_part = parts[1]
+                    
+                    start_ch, start_verse = map(int, start_part.split(':'))
+                    end_ch, end_verse = map(int, end_part.split(':'))
+                    
+                    # Calculate start page
+                    start_chapter_offset = max(0, (start_ch - 1) * 1.5)
+                    start_verse_offset = (start_verse - 1) / 25
+                    start_page = int(base_page + start_chapter_offset + start_verse_offset)
+                    
+                    # Calculate end page
+                    end_chapter_offset = max(0, (end_ch - 1) * 1.5)
+                    end_verse_offset = (end_verse - 1) / 25
+                    end_page = int(base_page + end_chapter_offset + end_verse_offset)
+                    
+                    if start_page != end_page:
+                        is_range = True
                 else:
                     # Single chapter verse range like "16-20"
                     if '-' in verses:
-                        start_verse = int(verses.split('-')[0])
+                        start_verse, end_verse = map(int, verses.split('-'))
+                        start_verse_offset = (start_verse - 1) / 25
+                        end_verse_offset = (end_verse - 1) / 25
+                        start_page = int(base_page + chapter_offset + start_verse_offset)
+                        end_page = int(base_page + chapter_offset + end_verse_offset)
+                        
+                        if start_page != end_page:
+                            is_range = True
                     else:
+                        # Single verse
                         start_verse = int(verses)
-                    verse_offset = (start_verse - 1) / 25
+                        verse_offset = (start_verse - 1) / 25
+                        start_page = int(base_page + chapter_offset + verse_offset)
+                        end_page = start_page
             elif '-' in verses:
                 # Simple verse range within same chapter
-                start_verse = int(verses.split('-')[0])
-                verse_offset = (start_verse - 1) / 25
+                start_verse, end_verse = map(int, verses.split('-'))
+                start_verse_offset = (start_verse - 1) / 25
+                end_verse_offset = (end_verse - 1) / 25
+                start_page = int(base_page + chapter_offset + start_verse_offset)
+                end_page = int(base_page + chapter_offset + end_verse_offset)
+                
+                if start_page != end_page:
+                    is_range = True
             else:
                 # Single verse
                 start_verse = int(verses)
                 verse_offset = (start_verse - 1) / 25
+                start_page = int(base_page + chapter_offset + verse_offset)
+                end_page = start_page
         
-        return int(base_page + chapter_offset + verse_offset)
+        # Format page display
+        if is_range:
+            page_display = f"{start_page}-{end_page}"
+        else:
+            page_display = str(start_page)
+        
+        return {
+            'page_start': start_page,
+            'page_end': end_page,
+            'page_display': page_display,
+            'is_range': is_range
+        }
     
     def _format_reference(self, book_key: str, chapter: int, verses: Optional[str]) -> str:
         """Format the reference for display."""

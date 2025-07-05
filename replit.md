@@ -69,6 +69,13 @@ The application is designed for deployment on Replit or similar platforms:
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+- July 05, 2025: Enhanced Bible reference parser to support multi-chapter references (Genesis 1-3, Matthew 5:1-7:10)
+- July 05, 2025: Added Enter key functionality using Streamlit forms for automatic submission
+- July 05, 2025: Implemented page range calculation and display for references spanning multiple pages
+- July 05, 2025: Updated UI to show "page" vs "pages" appropriately based on single page or page range
+
 ## Changelog
 
 Changelog:

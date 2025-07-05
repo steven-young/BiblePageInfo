@@ -29,7 +29,11 @@ def main():
                 result = parser.parse_and_convert(reference_input.strip())
                 
                 if result['success']:
-                    st.success(f"📖 **{result['reference']}** can be found on page **{result['page']}**")
+                    # Display page information with appropriate formatting for ranges
+                    if result.get('is_range', False):
+                        st.success(f"📖 **{result['reference']}** can be found on pages **{result['page']}**")
+                    else:
+                        st.success(f"📖 **{result['reference']}** can be found on page **{result['page']}**")
                     
                     # Display additional information if available
                     if result.get('book_info'):
@@ -38,6 +42,10 @@ def main():
                             st.write(f"**Chapter:** {result['book_info']['chapter']}")
                             if result['book_info'].get('verses'):
                                 st.write(f"**Verses:** {result['book_info']['verses']}")
+                            if result.get('is_range', False):
+                                st.write(f"**Page Range:** {result['page_start']} - {result['page_end']}")
+                            else:
+                                st.write(f"**Page:** {result['page']}")
                 else:
                     st.error(f"❌ {result['error']}")
                     
